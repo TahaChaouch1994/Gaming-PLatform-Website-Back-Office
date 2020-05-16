@@ -1,0 +1,283 @@
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Tournament Bracket</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="/assets/tour.css">
+
+  
+</head>
+
+
+
+<div class="card-header" style="margin-left: 17%;">
+    <h3 class="card-title">
+      <i class="fas fa-bullhorn"></i>
+      {{data.tournamentname}} Detail :
+    </h3>
+  </div>
+
+
+  <br><br>
+
+<div class="card card-secondary" style="width: 60%;margin-left: 25%;">
+    <div class="card-header">
+      <h3 class="card-title" style="margin-left: 40%;">{{data.tournamentname}}</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+      <form role="form">
+        <div class="row">
+          <div class="col-sm-6">
+
+            <br> 
+
+            <label >Game Name :</label>
+            <div class="row" style="width: 500px;">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <input type="checkbox" disabled>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder={{data.gamename}} disabled >
+                  </div>
+                </div>
+            </div>
+
+            <br>
+            
+          </div> 
+         
+        </div>
+
+        
+        <label >Game Type :</label>
+            <div class="row" style="width: 500px;">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <input type="checkbox" disabled>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder={{data.type}} disabled >
+                  </div>
+                </div>
+            </div>
+
+            <br>
+
+            <label >Tournament Name :</label>
+            <div class="row" style="width: 500px;">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <input type="checkbox" disabled>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder={{data.tournamentname}} disabled >
+                  </div>
+                </div>
+            </div>
+
+            <br>
+
+
+
+        <div class="row">
+            <div class="col-sm-4">
+              <!-- select -->
+              <div class="form-group">
+                <label>Game Format :</label>
+                <select class="custom-select"disabled>
+                  <option>{{data.gameformat}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label>Game Map :</label>
+                <select class="custom-select" disabled>
+                  <option>{{data.gamemap}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                  <label>Game Format :</label>
+                  <select class="custom-select" disabled>
+                    <option>{{data.gameformat}}</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+
+          <br>
+
+          <label >Entry :</label>
+            <div class="row" style="width: 500px;">
+                <div class="col-lg-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <input type="checkbox" disabled>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder={{data.entry}}  disabled>
+                  </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-4">
+                  <!-- select -->
+                  <div class="form-group">
+                    <label>Entry Fee (per Person):</label>
+ 
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            ESD
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder={{data.entryfee}} disabled>
+                      </div>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <!-- select -->
+                    <div class="form-group">
+                      <label>Tournament Fee :</label>
+   
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              ESD
+                            </span>
+                          </div>
+                          <input type="text" class="form-control" disabled placeholder={{data.tournamentfee}} >
+                        </div>
+                    </div>
+                  </div>
+
+                  </div>
+
+
+    
+                <br>
+
+
+                <div class="row">
+                    <div class="col-sm-4">
+                      <!-- select -->
+                      <div class="form-group">
+                        <label>Minimum Teams :</label>
+                        <select class="custom-select"disabled>
+                          <option>{{data.minteams}}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Maximum Teams :</label>
+                        <select class="custom-select" disabled>
+                          <option>{{data.maxteams}}</option>
+                        </select>
+                      </div>
+                    </div>
+                    </div>
+        
+                  <br>
+
+
+                  <label >Creator :</label>
+                  <div class="row" style="width: 500px;">
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <input type="checkbox" disabled>
+                            </span>
+                          </div>
+                          <input type="text" class="form-control" placeholder={{data.createtype}}  disabled>
+                        </div>
+                      </div>
+                  </div>
+      
+                  <br> <br> <br>
+
+
+                  <div class="col-lg-3 col-6" style="margin-left: 36.5%;">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                      <div class="inner" >
+                        <h3 style="margin-left: 35%;"> {{number2}}/{{data.maxteams}}</h3>
+        
+                        <h4 style="margin-left: 15%;">Team Joined</h4>
+                      </div>
+                      <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <br><br><br>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- select -->
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success" style="margin-left: 75%;width: 50%;" [swal]="showbracket"  (click)="justTest()">Generate Tournament Bracket</button>
+                      </div>    
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- select -->
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success" style="margin-left: 75%;width: 50%;" (click)="toBracket(data._id,data.tournamentfee,data.entryfee,number2)" >Show Tournament Bracket</button>
+                      </div>    
+                    </div>
+
+                  </div>
+        
+                  
+
+              <!--    <button (click)="justTest()">Test</button>
+                  <button (click)="showTable()">SHowtable</button> -->
+
+
+        <div class="form-group">
+        </div>
+      </form>
+    </div>
+
+
+
+    <div class="card card-secondary" style="width: 60%;margin-left: 25%;">
+    </div>
+  
+
+
+<swal
+  #showbracket
+  text= "Bracket Generated  Successfully For  {{data.tournamentname}} {{data.bracket}}"
+  icon= "success"
+  [focusCancel]="true">
+</swal>

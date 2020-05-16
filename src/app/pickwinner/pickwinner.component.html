@@ -1,0 +1,177 @@
+
+<div class="col-md-3" style="margin-left: 30%;margin-top: 5%;">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Demi Final Phase 1</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <a href="#"  [swal]="pick1"> {{data[0].player1}} </a>   
+      </div>
+      <div class="card-body">
+        <a href="#"  [swal]="pick2"> {{data[0].player2}} </a>   
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+
+
+  <div class="col-md-3" style="margin-left: 60%;">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Demi Final Phase 2</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <a href="#"  [swal]="pick3"> {{data[1].player1}} </a>
+      </div>
+      <div class="card-body">
+        <a href="#"  [swal]="pick4">  {{data[1].player2}} </a>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+
+
+
+ <br> <br>
+  <div class="col-md-3" style="margin-left: 30%;">
+    <div class="card card-success">
+      <div class="card-header">
+        <h3 class="card-title">Final</h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <!-- /.card-tools -->
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <a href="#"  [swal]="pick5"> {{data[2].player1}} </a>
+      </div>
+      <div class="card-body">
+        <a href="#"  [swal]="pick6"> {{data[3].player1}}  </a>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+
+
+
+
+
+
+  <swal 
+  #pick0
+  title="Are you sure ?"
+  text= "Are you sure to pick   {{data[0].player1}}   as a Winner ?  "
+  icon= "warning"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+  (confirm)="justClick(data[0].player1,3)"
+  confirmButtonText="Yes"
+  cancelButtonText="No"
+  >
+  </swal>
+
+
+
+
+
+<swal 
+#pick1
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[0].player1}}   as a Winner ?  "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[0].player1,3)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
+
+
+<swal 
+#pick2
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[0].player2}}   as a Winner ?  "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[0].player2,3)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
+
+<swal 
+#pick3
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[1].player1}}   as a Winner ?  "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[01].player1,3)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
+
+<swal 
+#pick4
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[1].player2}}   as a Winner ?  "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[1].player2,3)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
+
+
+
+<swal 
+#pick5
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[2].player1}}   as a Winner ? He will gain {{data4}} ESD   "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[2].player1,4)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
+
+
+<swal 
+#pick6
+title="Are you sure ?"
+text= "Are you sure to pick   {{data[3].player1}}   as a Winner ? He will gain {{data4}} ESD  "
+icon= "warning"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="justClick(data[3].player1,4)"
+confirmButtonText="Yes"
+cancelButtonText="No"
+>
+</swal>
