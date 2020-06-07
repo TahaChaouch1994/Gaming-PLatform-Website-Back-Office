@@ -1,3 +1,5 @@
+import { BetReportsListComponent } from './bet-reports-list/bet-reports-list.component';
+import { ForumReportsListComponent } from './forum-reports-list/forum-reports-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TournamentadminComponent } from './tournamentadmin/tournamentadmin.component';
@@ -8,6 +10,8 @@ import { AcceptedtournamentdetailComponent } from './acceptedtournamentdetail/ac
 import { BrackettournamentComponent } from './brackettournament/brackettournament.component';
 import { BracketoftournamentComponent } from './bracketoftournament/bracketoftournament.component';
 import { PickwinnerComponent } from './pickwinner/pickwinner.component';
+import { ForumReportDetailsComponent } from './forum-report-details/forum-report-details.component';
+import { BetReportDetailsComponent } from './bet-report-details/bet-report-details.component';
 
 
 const routes: Routes = [
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'acceptedtournament', component: AcceptedtournamentsComponent},
   { path: 'acceptedtournamentdetail', component: AcceptedtournamentdetailComponent},
   { path: 'brackettournament', component: BrackettournamentComponent},
-  { path: 'pickwinner', component: PickwinnerComponent}
+  { path: 'pickwinner', component: PickwinnerComponent},
+  { path: 'forumreports', component: ForumReportsListComponent},
+  { path: 'forumreportdetail', component: ForumReportDetailsComponent},
+  { path: 'betreports', component: BetReportsListComponent},
+  { path: 'betreportdetails', component: BetReportDetailsComponent}
 
 ];
 

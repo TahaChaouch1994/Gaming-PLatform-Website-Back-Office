@@ -15,6 +15,11 @@ import { AcceptedtournamentdetailComponent } from './acceptedtournamentdetail/ac
 import { BrackettournamentComponent } from './brackettournament/brackettournament.component';
 import { BracketoftournamentComponent } from './bracketoftournament/bracketoftournament.component';
 import { PickwinnerComponent } from './pickwinner/pickwinner.component';
+import { ForumReportsListComponent } from './forum-reports-list/forum-reports-list.component';
+import { BetReportsListComponent } from './bet-reports-list/bet-reports-list.component';
+import { BetReportDetailsComponent } from './bet-report-details/bet-report-details.component';
+import { ForumReportDetailsComponent } from './forum-report-details/forum-report-details.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import { PickwinnerComponent } from './pickwinner/pickwinner.component';
     BrackettournamentComponent,
     BracketoftournamentComponent,
     PickwinnerComponent,
+    ForumReportsListComponent,
+    BetReportsListComponent,
+    BetReportDetailsComponent,
+    ForumReportDetailsComponent,
+
     
 
   ],
