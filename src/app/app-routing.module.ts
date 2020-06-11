@@ -1,3 +1,4 @@
+import { ListbannedusersComponent } from './listbannedusers/listbannedusers.component';
 import { BetReportsListComponent } from './bet-reports-list/bet-reports-list.component';
 import { ForumReportsListComponent } from './forum-reports-list/forum-reports-list.component';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'forumreports', component: ForumReportsListComponent},
   { path: 'forumreportdetail', component: ForumReportDetailsComponent},
   { path: 'betreports', component: BetReportsListComponent},
-  { path: 'betreportdetails', component: BetReportDetailsComponent}
+  { path: 'betreportdetails', component: BetReportDetailsComponent},
+  { path: 'listbanned', component: ListbannedusersComponent}
 
 ];
 

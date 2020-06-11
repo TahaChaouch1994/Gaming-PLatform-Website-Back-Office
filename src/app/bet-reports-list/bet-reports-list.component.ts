@@ -1,7 +1,7 @@
 import { Couponreport } from './../models/coupon-report';
 import { Component, OnInit } from '@angular/core';
 import { ReportServicesService } from './../services/report-services.service';
-
+import {SnotifyService} from 'ng-snotify';
 import { Router, NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-bet-reports-list',
@@ -11,15 +11,18 @@ import { Router, NavigationExtras } from '@angular/router';
 export class BetReportsListComponent implements OnInit {
   listreports : []
   constructor(
-
+    private snotifyService: SnotifyService,
     private router: Router,
     private forumapi : ReportServicesService,
   ) { }
 
   ngOnInit(): void {
     this.forumapi.listbetreports().subscribe(i=>{
-   
+      
       this.listreports = i ;
+      this.listreports.forEach(p=>{
+        console.log(p["state"]);
+      })
       console.log(i)
     })
   }

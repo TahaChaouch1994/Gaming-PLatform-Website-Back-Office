@@ -19,7 +19,8 @@ import { ForumReportsListComponent } from './forum-reports-list/forum-reports-li
 import { BetReportsListComponent } from './bet-reports-list/bet-reports-list.component';
 import { BetReportDetailsComponent } from './bet-report-details/bet-report-details.component';
 import { ForumReportDetailsComponent } from './forum-report-details/forum-report-details.component';
-
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { ListbannedusersComponent } from './listbannedusers/listbannedusers.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ForumReportDetailsComponent } from './forum-report-details/forum-report
     BetReportsListComponent,
     BetReportDetailsComponent,
     ForumReportDetailsComponent,
+    ListbannedusersComponent,
 
     
 
@@ -46,12 +48,16 @@ import { ForumReportDetailsComponent } from './forum-report-details/forum-report
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SnotifyModule,
     HttpClientModule,
     SweetAlert2Module.forRoot(),
     SweetAlert2Module,
     SweetAlert2Module.forChild({ /* options */ }),
   ],
-  providers: [],
+  providers: [
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

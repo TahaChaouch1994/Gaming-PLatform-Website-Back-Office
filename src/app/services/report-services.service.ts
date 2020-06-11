@@ -78,10 +78,53 @@ export class ReportServicesService {
       catchError(this.handleError)
     )
   }
-
+  updatestatereportbet(item,sto): Observable<any> {
+    return this.http
+    .get<string>(this.base_path+"/reportbet/stateupdate?id="+item+"&stt="+sto, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
   banuserfromforum(item,sto): Observable<any> {
     return this.http
     .get<string>(this.base_path+"/user/banforum?id="+item+"&stt="+sto, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+  userHasWallet(user): Observable<string>
+  {
+    return this.http
+    .get<string>(this.base_path+"/user/hasWallet?id="+user, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
+  sendcoupon(firstpublickey, secondpublickey, firstprivatekey, amount): Observable<any> {
+    let item = {"firstpublickey":firstpublickey, "secondpublickey":secondpublickey, "firstprivatekey":firstprivatekey, "amount":amount};
+    return this.http
+      .post<any>(this.base_path+"/bet/transaction", JSON.stringify(item), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      )
+  }
+
+
+  getallbannedusers(): Observable<any> {
+    return this.http
+    .get<string>(this.base_path+"/bannedusers/get?id=0", this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+  unbanuserfromforum(item): Observable<any> {
+    return this.http
+    .get<string>(this.base_path+"/user/banforum?id="+item+"&stt=1", this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)

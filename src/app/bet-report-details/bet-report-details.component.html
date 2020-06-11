@@ -104,8 +104,8 @@
                 </tbody>
               </table>
             <div class="column" style="align-self: center;">
-                <button type="button" class="btn btn-block bg-gradient-success" style="width: 40%;height: 40px;margin-left: 40%;align-self: center;margin-bottom: 12px;" >Dismiss report</button>
-                <button type="button" class="btn btn-block bg-gradient-warning" style="width: 40%;height: 40px;margin-left: 40%;align-self: center;margin-bottom: 12px;" >Accept Report and pay </button>
+                <button type="button" class="btn btn-block bg-gradient-success" style="width: 40%;height: 40px;margin-left: 40%;align-self: center;margin-bottom: 12px;" (click)="dismissreport()" >Dismiss report</button>
+                <button type="button" class="btn btn-block bg-gradient-warning" style="width: 40%;height: 40px;margin-left: 40%;align-self: center;margin-bottom: 12px;"  (click)="acceptreport()">Accept Report and pay </button>
 
             </div>
           </div>
@@ -169,4 +169,4 @@
     </div>
 </div>
 
- 
+<ng-snotify></ng-snotify>
