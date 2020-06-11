@@ -12,7 +12,7 @@ export class TournamentadminService {
 
   private data = []; 
 
-  base_url="http://localhost:3005/tournament/";
+  base_url="http://localhost:1337/tournament/";
 
   constructor(private http: HttpClient) { }
 
